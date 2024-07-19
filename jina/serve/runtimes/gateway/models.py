@@ -4,7 +4,7 @@ from enum import Enum
 from types import SimpleNamespace
 from typing import TYPE_CHECKING, Callable, Dict, List, Optional, Union
 from google.protobuf.descriptor import Descriptor, FieldDescriptor
-from pydantic import BaseConfig, BaseModel, Field, create_model, root_validator
+from pydantic.v1 import BaseConfig, BaseModel, Field, create_model, root_validator
 
 from jina.proto.jina_pb2 import DataRequestProto, JinaInfoProto, RouteProto, StatusProto
 from jina._docarray import docarray_v2

@@ -1,7 +1,7 @@
 import grpc
 from grpc_health.v1 import health, health_pb2, health_pb2_grpc
 from grpc_reflection.v1alpha import reflection
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 from uvicorn import Config, Server
 
 from jina import Gateway

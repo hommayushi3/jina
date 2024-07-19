@@ -1,4 +1,4 @@
-import pydantic
+import pydantic.v1 as pydantic
 import pytest
 
 from jina.serve.runtimes.gateway.models import (
@@ -55,7 +55,7 @@ def test_models_with_docs():
     'bad_docs', ['pure_text', {'docs': {'docs': {'text': 'input'}}}]
 )
 def test_models_fail(bad_docs):
-    import pydantic
+    import pydantic.v1 as pydantic
 
     with pytest.raises(pydantic.error_wrappers.ValidationError):
         _ = JinaRequestModel(data=bad_docs)

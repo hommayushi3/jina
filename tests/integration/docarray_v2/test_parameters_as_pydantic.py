@@ -3,7 +3,7 @@ from typing import Dict
 import pytest
 from docarray import BaseDoc, DocList
 from docarray.documents import TextDoc
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 
 from jina import Deployment, Executor, Flow, requests
 from jina.helper import random_port
@@ -211,8 +211,8 @@ def test_openai(ctxt_manager, include_gateway):
 
     random_example = ''.join(random.choices(string.ascii_letters, k=10))
     random_description = ''.join(random.choices(string.ascii_letters, k=10))
-    from pydantic import BaseModel
-    from pydantic.fields import Field
+    from pydantic.v1 import BaseModel
+    from pydantic.v1.fields import Field
 
     class MyDocWithExample(BaseDoc):
         """This test should be in description"""

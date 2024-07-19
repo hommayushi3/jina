@@ -82,8 +82,8 @@ def _parse_specific_params(parameters: Dict, executor_name: str):
 if docarray_v2:
     from docarray import BaseDoc, DocList
     from docarray.typing import AnyTensor
-    from pydantic import create_model
-    from pydantic.fields import FieldInfo
+    from pydantic.v1 import create_model
+    from pydantic.v1.fields import FieldInfo
 
     from jina._docarray import docarray_v2
 

@@ -1,7 +1,7 @@
 from typing import Optional
 
 from docarray import Document, DocumentArray
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 from uvicorn import Config, Server
 
 from jina import Gateway

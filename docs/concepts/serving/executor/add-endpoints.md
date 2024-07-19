@@ -185,7 +185,7 @@ emphasize-lines: 13
 from typing import Dict, Union, TypeVar
 from jina import Executor, requests
 from docarray import DocList, BaseDoc
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 
 T_input = TypeVar('T_input', bound='BaseDoc')
 T_output = TypeVar('T_output', bound='BaseDoc')
@@ -218,7 +218,7 @@ emphasize-lines: 13
 from typing import Dict, Union, TypeVar
 from jina import Executor, requests
 from docarray import DocList, BaseDoc
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 
 T_input = TypeVar('T_input', bound='BaseDoc')
 T_output = TypeVar('T_output', bound='BaseDoc')
@@ -254,7 +254,7 @@ emphasize-lines: 15
 from typing import Dict, Union, TypeVar
 from jina import Executor, requests
 from docarray import DocList, BaseDoc
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 
 T_input = TypeVar('T_input', bound='BaseDoc')
 T_output = TypeVar('T_output', bound='BaseDoc')
@@ -289,7 +289,7 @@ emphasize-lines: 15
 from typing import Dict, Union, TypeVar
 from jina import Executor, requests
 from docarray import DocList, BaseDoc
-from pydantic import BaseModel
+from pydantic.v1 import BaseModel
 
 T_input = TypeVar('T_input', bound='BaseDoc')
 T_output = TypeVar('T_output', bound='BaseDoc')
@@ -509,7 +509,7 @@ Let's see how this would look:
 ```python
 from jina import Executor, requests, Deployment
 from docarray import BaseDoc
-from pydantic import BaseModel, Field
+from pydantic.v1 import BaseModel, Field
 
 
 class Prompt(BaseDoc):

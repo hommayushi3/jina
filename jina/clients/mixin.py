@@ -12,7 +12,7 @@ from jina.helper import deprecate_by, get_or_reuse_loop, run_async
 from jina.importer import ImportExtensions
 
 if TYPE_CHECKING:  # pragma: no cover
-    from pydantic import BaseModel
+    from pydantic.v1 import BaseModel
     from jina.clients.base import CallbackFnType, InputType
     from jina.types.request.data import Response
 

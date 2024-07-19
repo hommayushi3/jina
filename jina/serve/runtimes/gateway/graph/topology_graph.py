@@ -303,7 +303,7 @@ class TopologyGraph:
                                             parameters_model_name
                                             not in models_created_by_name
                                         ):
-                                            from pydantic import BaseModel
+                                            from pydantic.v1 import BaseModel
 
                                             parameters_model = (
                                                 _create_pydantic_model_from_schema(

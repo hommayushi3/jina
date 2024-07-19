@@ -976,7 +976,7 @@ def test_flow_incompatible_linear(protocol):
 
 @pytest.mark.parametrize('protocol', ['grpc', 'http', 'websocket'])
 def test_flow_compatible_different_exact_schema(protocol):
-    from pydantic import Field
+    from pydantic.v1 import Field
 
     class MyFirstDoc(BaseDoc):
         a: str = Field(default='My first default')
@@ -1549,7 +1549,7 @@ def test_doc_with_examples(ctxt_manager, include_gateway):
 
     random_example = ''.join(random.choices(string.ascii_letters, k=10))
     random_description = ''.join(random.choices(string.ascii_letters, k=10))
-    from pydantic.fields import Field
+    from pydantic.v1.fields import Field
 
     class MyDocWithExample(BaseDoc):
         """This test should be in description"""

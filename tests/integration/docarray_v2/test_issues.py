@@ -3,7 +3,7 @@ from typing import Dict, List, Optional
 import aiohttp
 import pytest
 from docarray import BaseDoc, DocList
-from pydantic import Field
+from pydantic.v1 import Field
 
 from jina import Client, Deployment, Executor, Flow, requests
 from jina.clients.base.helper import HTTPClientlet

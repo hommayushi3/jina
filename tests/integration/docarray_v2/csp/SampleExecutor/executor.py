@@ -1,7 +1,7 @@
 import numpy as np
 from docarray import BaseDoc, DocList
 from docarray.typing import NdArray
-from pydantic import Field, BaseModel
+from pydantic.v1 import Field, BaseModel
 
 from jina import Executor, requests
 

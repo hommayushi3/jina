@@ -73,7 +73,7 @@ def is_pydantic_model(annotation: Type) -> bool:
     except ImportError:
         from typing_extensions import get_args, get_origin
 
-    from pydantic import BaseModel
+    from pydantic.v1 import BaseModel
 
     origin = get_origin(annotation) or annotation
     args = get_args(annotation)
@@ -98,7 +98,7 @@ def get_inner_pydantic_model(annotation: Type) -> bool:
     try:
         from typing import Optional, Type, Union, get_args, get_origin
 
-        from pydantic import BaseModel
+        from pydantic.v1 import BaseModel
 
         origin = get_origin(annotation) or annotation
         args = get_args(annotation)
@@ -248,7 +248,7 @@ class _FunctionWithSchema(NamedTuple):
         )
         parameters_is_pydantic_model = False
         if parameters_model is not None and docarray_v2:
-            from pydantic import BaseModel
+            from pydantic.v1 import BaseModel
 
             parameters_is_pydantic_model = is_pydantic_model(parameters_model)
             parameters_model = get_inner_pydantic_model(parameters_model)

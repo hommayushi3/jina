@@ -6,7 +6,7 @@ from docarray.typing import NdArray
 from docarray.typing.bytes import ImageBytes
 from docarray.typing.url import AnyUrl
 from jina import Executor, requests
-from pydantic import Field
+from pydantic.v1 import Field
 
 
 class TextAndImageDoc(BaseDoc):

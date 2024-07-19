@@ -43,8 +43,8 @@ def get_fastapi_app(
     with ImportExtensions(required=True):
         from fastapi import FastAPI, Response, HTTPException
         from fastapi.middleware.cors import CORSMiddleware
-        import pydantic
-        from pydantic import Field
+        import pydantic.v1 as pydantic
+        from pydantic.v1 import Field
     from docarray import BaseDoc, DocList
     from docarray.base_doc.docarray_response import DocArrayResponse
 
@@ -79,8 +79,8 @@ def get_fastapi_app(
 
     import os
 
-    from pydantic import BaseModel
-    from pydantic.config import BaseConfig, inherit_config
+    from pydantic.v1 import BaseModel
+    from pydantic.v1.config import BaseConfig, inherit_config
 
     from jina.proto import jina_pb2
     from jina.serve.runtimes.gateway.models import (

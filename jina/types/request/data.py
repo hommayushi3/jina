@@ -308,7 +308,7 @@ class DataRequest(Request):
         self.proto_wo_data.parameters.Clear()
         parameters = value
         if docarray_v2:
-            from pydantic import BaseModel
+            from pydantic.v1 import BaseModel
 
             if isinstance(value, BaseModel):
                 parameters = dict(value)
@@ -665,7 +665,7 @@ class SingleDocumentRequest(Request):
         self.proto_wo_data.parameters.Clear()
         parameters = value
         if docarray_v2:
-            from pydantic import BaseModel
+            from pydantic.v1 import BaseModel
 
             if isinstance(value, BaseModel):
                 parameters = dict(value)

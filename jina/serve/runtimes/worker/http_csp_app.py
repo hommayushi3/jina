@@ -29,11 +29,11 @@ def get_fastapi_app(
     :return: fastapi app
     """
     with ImportExtensions(required=True):
-        import pydantic
+        import pydantic.v1 as pydantic
         from fastapi import FastAPI, HTTPException, Request
         from fastapi.middleware.cors import CORSMiddleware
-        from pydantic import BaseModel, Field
-        from pydantic.config import BaseConfig, inherit_config
+        from pydantic.v1 import BaseModel, Field
+        from pydantic.v1.config import BaseConfig, inherit_config
 
     import os
 
@@ -85,7 +85,7 @@ def get_fastapi_app(
             from typing_extensions import get_args, get_origin
 
         from docarray.base_doc.docarray_response import DocArrayResponse
-        from pydantic import BaseModel, ValidationError, parse_obj_as
+        from pydantic.v1 import BaseModel, ValidationError, parse_obj_as
 
         app_kwargs = dict(
             path=f'/{endpoint_path.strip("/")}',

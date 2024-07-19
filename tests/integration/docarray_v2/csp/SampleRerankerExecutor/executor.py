@@ -1,5 +1,5 @@
 from docarray import BaseDoc, DocList
-from pydantic import Field
+from pydantic.v1 import Field
 from typing import Union, Optional, List
 from jina import Executor, requests
 
